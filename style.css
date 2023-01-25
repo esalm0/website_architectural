@@ -1,0 +1,839 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}   
+
+:root{
+    --bg-color:#082032;
+    --text-color-one:#FF4C29;
+    --icon-color : #2C74B3 ;
+}
+
+
+body{
+    background-color:var(--bg-color);
+    color: white;
+}
+
+.baseSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+}
+
+.sac1{
+    width: 100%;
+    height: 75vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3) , rgba(0,0,0,0.6) ), url(images/image-landing.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.navcontent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+ .links{
+   display: flex;
+   flex-direction: row;
+   padding: 5px;
+   color: rgba(255, 255, 255, 0.862);
+   transition: all .50s ease;
+}
+
+ .links li:hover{
+    color: white;
+}
+
+ .links li {
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 45px;
+    list-style-type: none;
+    position: relative;
+    transition: all 0.50s ease;
+}
+
+ .links li::after{
+    content: "";
+    width: 0;
+    display: block;
+    background-color: var(--text-color-one);
+    height: 2px;
+    margin: auto;
+    transition: all 0.50s ease;
+}
+
+.navcontent .links li:hover::after{
+    color: var(--text-color-one);
+    width: 100%;
+}
+
+
+.navcontent .logo{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo p{
+    margin-left: 15px;
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo i {
+    color: var(--text-color-one);
+    font-size: 28px;
+    margin-left: 5px;
+}
+
+
+.leftnav button{
+    cursor: pointer;
+    width: 90px;
+    margin-right: 0px;
+    border-radius: 7px;
+    border-color: transparent;
+    border-style: solid;
+    background-color:var(--bg-color);
+    color: whitesmoke;
+    padding: 5px;
+    transition: all .5s ease;
+}
+
+.leftnav button:hover{
+    color: white;
+    background-color: var(--text-color-one);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.574);
+}
+
+#menu-icon{
+    width: fit-content;
+    font-size: 27px;
+    color: var(--text-color-one);
+    cursor: pointer;
+    display: none;
+    position: relative;
+    left: 10px;
+}
+
+.contentInLanding {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 370px;
+}
+
+.contentInLanding h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.contentInLanding h1 i {
+    font-size: 40px;
+}
+
+
+.contentInLanding h1::first-letter{
+    color: var(--text-color-one);
+}
+
+.contentInLanding p{
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+.contentInLanding button{
+    padding: 10px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+    transform-origin: 0 0 ;
+    transition: all 0.5s linear;
+    
+}
+
+.contentInLanding button::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.4;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0 ;
+    transition: all 0.5s linear;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.contentInLanding button::before{
+    transform: scaleY(0);
+}
+
+.contentInLanding button:hover::before{
+    transform: scaleY(1);
+}
+
+.info{
+    width: 100%;
+    background-color: var(--bg-color);
+    height: 215px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contentInfo{
+    width: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contentInfo p::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 80px;
+    top: 0;
+    background-color: var(--icon-color);
+}
+
+.contentInfo p {  
+  font-size: 14px;  
+  width: 400px;
+}
+
+
+.allBtn{
+    background-color: var(--bg-color);
+    height: 90px;
+    width: 500px;
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.allBtn button{
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    margin: 0 30px;
+    border-radius: 10px;
+    transition: all .5s ease;
+    border-width: 0;
+    color: white;
+    font-size: 13px;
+
+}
+
+.allBtn .btnone{
+    background-color: red;
+    opacity: .3;
+}
+
+.allBtn .btntwo{
+    background-color: var(--icon-color);
+    opacity: .3;
+}
+
+.allBtn button:hover{
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.ourProjects{
+    margin-left: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ourProjects i{
+    color: #0e3156;
+}
+
+.sec2{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2 .continer{
+    padding: 10px;
+    height: max-content;
+    width: 65%;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.card{
+    background-image: url(images/image-list.jpg);
+    height: 300px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+    margin-top: 20px;
+}
+
+.cardContent{
+    position: absolute;
+    background-image: linear-gradient(rgba(0,0,0,0.03) , rgba(0,0,0,1.5) );
+    text-align: center;
+    bottom: -52%;
+    transition: all .5s ease;
+}
+
+.cardContent h1{
+    text-align: left;
+    margin-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--bg-color);
+}
+
+.cardContent p {
+    word-break: keep-all;
+    margin-top: 15px;
+    margin: 7px;
+}
+
+.cardContent h1::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background-color: var(--text-color-one);
+    top: 30px;
+    left: 0;
+    margin-left: 5px;
+    transform: scaleX(0);
+    transition: all .5s ease;
+}
+
+.card:hover .cardContent h1::after{
+    transform: scaleX(1);
+}
+
+
+.card:hover .cardContent{
+    bottom: 0;
+}
+
+.sec3{
+    margin-top: 100px;
+    height: 40vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6) ) ,url(images/image-landing.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.counterDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+    text-align: center;
+}
+
+.counterDiv i {
+    font-size: 50px;
+   
+}
+
+.counterDiv p {
+    font-size: 25px;
+    margin: 8px 0;
+
+}
+
+.num{
+    position: relative;
+    margin-top: 5px;
+}
+
+.num::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color:white;
+    opacity: .6;
+    bottom: 0;
+    left: 0;  
+}  
+
+
+
+
+.sec4{
+    margin: 100px 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sec4 .continer{
+    position: relative;
+    width: 90%;
+    height: max-content;
+    background-color:transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sec4 .continer .cardd {
+    cursor: pointer;
+    box-shadow: 0 0 18px 1.5px rgba(0, 0, 0, 0.659);
+    position: relative;
+    height: 350px;
+    width: 300px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all .5s ease;
+    margin: 25px 0;
+}
+
+.sec4 .continer .cardd i {
+    top: 35px;
+    position: absolute;
+    font-size: 70px;
+    color: #082032;
+    transform: scale(1);
+}
+
+.sec4 .continer .cardd:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 22px 1.5px rgba(0, 0, 0, 0.659);
+}
+
+
+.sec4 .continer .cardd::before {
+    content: "";
+    background-color: #2C74B3;
+    opacity: .5;
+    width: 100%;
+    position: absolute;
+    height: 150px;
+    top: 0;
+    border-radius: 15px 15px 0 0;
+}
+
+.sec4 .continer .cardd h1 {
+    color: #082032;
+    position: absolute;
+    top: 165px;
+    text-decoration: underline;
+    
+}
+
+
+.sec4 .continer .cardd p {
+    color: #05366b;
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    width: 80%;
+    overflow: hidden;
+}
+
+
+
+.sec5{
+    background: linear-gradient(var(--bg-color),#0e3156,50% , var(--bg-color));
+    width: 100%;
+    height: max-content ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.sec5 .continer .ourGallery{
+    color: white;
+    text-align: center;
+    text-decoration: overline;
+    font-size: 30px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.sec5 .continer .ourGallery::first-letter{
+    color: #FF4C29;
+}
+
+.sec5 .continer{
+    width: 80%;
+    background-color: transparent;
+    height: 100%;
+}
+
+.sec5 .continer .galleryParent{ 
+    display: flex;
+    gap: 15px;
+    height: 400px;
+    margin-top: 80px;
+
+}
+
+.sec5 .continer .galleryParent .galleryChaid{
+    cursor: pointer;
+    flex: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius:15px ;
+    filter: blur(1.2px);
+    transition: all 0.8s cubic-bezier(.25 , .4 , .45 , 1.4);
+}
+
+
+.sec5 .continer .galleryParent .galleryChaid:hover{
+    border-radius:15px ;
+    flex: 1.8;
+    filter: blur(0);
+}
+
+
+.sec6{
+    width: 100%;
+    height: 20vh;
+    background-color: #05366b;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec6 .icons ul {
+    margin:30px 0 ;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+}
+
+.sec6 .by {
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.sec6 .icons ul li{
+    cursor: pointer;
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.503);
+    background-color:#082032;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .50s ease;
+    
+}
+
+.sec6 .icons ul li i {
+    font-size: 20px;
+    transition: all .50s ease;
+}
+
+.sec6 .icons ul li:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.714);
+}
+
+
+
+
+
+
+
+
+   /*media*/
+
+
+
+
+@media (max-width : 1450px){
+    
+.contentInfo p::after{
+    height: 100%;
+    width: 2px;
+    left: -5px;
+    top: 0;
+}
+}                                              
+
+@media (max-width : 1280px){
+    .navcontent{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+  
+    
+}
+
+
+@media (max-width : 1045px){
+    .links li {
+        margin: 0 20px;
+    }
+}
+
+
+
+@media (max-width : 1000px){
+    #menu-icon{
+       display: block;
+    }
+
+     .links {
+        position: absolute;
+        right: 2%;
+        top: -50%;
+        width: 150px;
+        height:max-content;
+        color: transparent;
+        background-color: var(--text-color-one);
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        border-radius: 5px;
+        transition: all .50s ease;
+    }
+
+
+    .links li{
+        color: whitesmoke;
+    }
+
+    .open {
+        top: 7%;
+        transition: all 0.50s ease;
+      
+    }
+
+
+    .navcontent .logo i , .navcontent .logo p {
+        font-size: 17px;
+    }
+
+    .navcontent .leftnav{
+        position:absolute;
+        right: 45px;
+    }
+
+    .leftnav button{
+        width: 70px;
+        height: 25px;
+        font-size: 12px;
+        text-align: center;
+        margin: 0;
+    }
+
+     .links li{
+        display: block;
+        margin: 0 10px;
+        transition: all .50s ease;
+        opacity: 0.5;
+        color: var(--bg-color);
+    }
+
+     .links li:hover{
+        opacity: 1;
+        color: white;
+        transform: translatey(-1px);
+    }
+    
+
+    .navbar li a:hover {
+        transform: translatey(-4px);
+        color: white;
+    }
+
+
+    .contentInLanding h1 {
+        font-size: 45px;
+    }
+
+    .contentInLanding h1 i {
+        font-size: 30px;
+    }
+
+        
+    .contentInLanding p{
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+
+    .contentInLanding button{
+    width: 150px;
+    font-size: 12px;
+    }
+
+
+    .contentInfo{
+       width: 30%;
+    }
+
+    .allBtn{
+        width: 30%;
+        flex-direction: column;
+        
+    }
+
+    .allBtn button{
+        width: 80%;
+        margin: 10px 0;
+    }
+
+        
+    .contentInfo p::after{
+        height: 100%;
+        width: 2px;
+        left: -9px;
+        top: 0;
+    }
+
+
+        
+    .contentInfo p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+        
+    .sec3{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+        
+    .sec2 .continer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
+    }
+
+        
+    .sec4 .continer{
+        flex-direction: column;
+    }
+
+}
+
+
+
+@media (max-width : 765px){
+    .contentInfo p {
+        font-size: 15px;
+       
+    }
+
+}
+
+
+
+
+@media (max-width : 678px){
+    .contentInfo p {
+        font-size: 15px;
+    
+      
+    }
+}
+
+
+
+
+
+
+@media (max-width : 550px){
+    
+.sec5 .continer .galleryParent {
+    flex-direction: column;
+    gap: 15px;
+    height: 150vh;
+    
+}
+
+}
+
+
+
+@media (max-width : 480px){
+    .contentInfo p {
+        font-size: 12px;
+    }
+
+    .allBtn {
+        width: 40%;
+    }
+
+}
+
+
+
+
